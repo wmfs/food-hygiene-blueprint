@@ -2,7 +2,7 @@
 
 'use strict'
 
-const tymly = require('tymly')
+const tymly = require('@wmfs/tymly')
 const path = require('path')
 const expect = require('chai').expect
 const process = require('process')
@@ -28,8 +28,8 @@ describe('data import', function () {
     tymly.boot(
       {
         pluginPaths: [
-          require.resolve('tymly-etl-plugin'),
-          require.resolve('tymly-pg-plugin'),
+          require.resolve('@wmfs/tymly-etl-plugin'),
+          require.resolve('@wnfs.tymly-pg-plugin'),
           path.resolve(__dirname, '../node_modules/tymly-test-helpers/plugins/allow-everything-rbac-plugin')
         ],
         blueprintPaths: [
