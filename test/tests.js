@@ -29,7 +29,7 @@ describe('data import', function () {
       {
         pluginPaths: [
           require.resolve('@wmfs/tymly-etl-plugin'),
-          require.resolve('@wnfs.tymly-pg-plugin'),
+          require.resolve('@wmfs/tymly-pg-plugin'),
           path.resolve(__dirname, '../node_modules/tymly-test-helpers/plugins/allow-everything-rbac-plugin')
         ],
         blueprintPaths: [
