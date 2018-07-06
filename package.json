@@ -30,7 +30,7 @@
     "rimraf": "2.6.2",
     "standard": "11.0.1",
     "semantic-release": "^15.5.2",
-    "@wmfs/tymly": "1.4.1",
+    "@wmfs/tymly": "1.5.0",
     "@wmfs/tymly-etl-plugin": "1.4.0",
     "@wmfs/tymly-pg-plugin": "1.6.0",
     "@wmfs/tymly-test-helpers": "1.0.1"
