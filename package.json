@@ -33,7 +33,7 @@
     "semantic-release": "15.9.15",
     "@semantic-release/changelog": "3.0.0",
     "@semantic-release/git": "7.0.4",
-    "@wmfs/tymly": "1.26.1",
+    "@wmfs/tymly": "1.27.0",
     "@wmfs/tymly-etl-plugin": "1.48.0",
     "@wmfs/tymly-pg-plugin": "1.62.0",
     "@wmfs/tymly-test-helpers": "1.1.3"
