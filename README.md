@@ -1,7 +1,7 @@
 # food-hygiene-blueprint
 [![Tymly Blueprint](https://img.shields.io/badge/tymly-blueprint-blue.svg)](https://tymly.io/)
 [![npm (scoped)](https://img.shields.io/npm/v/@wmfs/food-hygiene-blueprint.svg)](https://www.npmjs.com/package/@wmfs/food-hygiene-blueprint)
-[![Build Status](https://travis-ci.org/wmfs/food-hygiene-blueprint.svg?branch=master)](https://travis-ci.org/wmfs/food-hygiene-blueprint)
+[![CircleCI](https://circleci.com/gh/wmfs/food-hygiene-blueprint.svg?style=svg)](https://circleci.com/gh/wmfs/food-hygiene-blueprint)
 [![codecov](https://codecov.io/gh/wmfs/food-hygiene-blueprint/branch/master/graph/badge.svg)](https://codecov.io/gh/wmfs/food-hygiene-blueprint)
 [![CodeFactor](https://www.codefactor.io/repository/github/wmfs/food-hygiene-blueprint/badge)](https://www.codefactor.io/repository/github/wmfs/food-hygiene-blueprint)
 [![Dependabot badge](https://img.shields.io/badge/Dependabot-active-brightgreen.svg)](https://dependabot.com/)
