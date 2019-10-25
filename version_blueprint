@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+. .version
+echo $VERSION
+version=$VERSION
+sudo apt-get install jq
+sudo jq --arg version "$version" '.version=$version' blueprint.json > blueprint_edit.json && mv blueprint_edit.json blueprint.json
+git config --global user.name "$GIT_COMMITTER_NAME"
+git config --global user.email "$GIT_COMMITTER_EMAIL"
+git remote set-url origin https://${GIT_COMMITTER_NAME}:${GH_TOKEN}@github.com/wmfs/food-hygine-blueprint.git
+git checkout master
+git add blueprint.json
+git commit -m "chore(version): blueprint $version [skip ci]"
+git push
