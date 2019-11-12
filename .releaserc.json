@@ -16,6 +16,10 @@
   },
   "prepare": [
     {
+      "path": "@semantic-release/exec",
+      "cmd": "echo 'VERSION=${nextRelease.version}' > .version && ./version_blueprint"
+    },
+    {
       "path": "@semantic-release/changelog",
       "changelogFile": "CHANGELOG.md"
     },
@@ -23,19 +27,11 @@
       "path": "@semantic-release/git",
       "assets": ["CHANGELOG.md"]
     },
-    {
-      "path": "@semantic-release/exec",
-      "cmd": "echo 'VERSION=${nextRelease.version}' > .version"
-    },
     "@semantic-release/npm"
   ],
   "publish": [
     "@semantic-release/npm",
-    "@semantic-release/github",
-    {
-      "path": "@semantic-release/exec",
-      "cmd": "./version_blueprint"
-    }
+    "@semantic-release/github"
   ],
   "success": ["@semantic-release/github"],
   "fail": ["@semantic-release/github"]
