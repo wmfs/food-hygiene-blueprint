@@ -92,7 +92,7 @@ describe('data import', function () {
 
   it('Should be clean up the database', function (done) {
     client.query(
-      `DELETE FROM fsa.food_ratings WHERE fhrsid::text LIKE '123456789%';`,
+      'DELETE FROM fsa.food_ratings WHERE fhrsid::text LIKE \'123456789%\';',
       function (err, result) {
         if (err) {
           done(err)
