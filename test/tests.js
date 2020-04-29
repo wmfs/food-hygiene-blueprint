@@ -24,8 +24,8 @@ describe('data import', function () {
     }
   })
 
-  it('should startup tymly', function (done) {
-    tymly.boot(
+  it('startup tymly', async () => {
+    const tymlyServices = await tymly.boot(
       {
         pluginPaths: [
           require.resolve('@wmfs/tymly-etl-plugin'),
@@ -36,19 +36,16 @@ describe('data import', function () {
           path.resolve(__dirname, './../')
         ],
         config: {}
-      },
-      function (err, tymlyServices) {
-        expect(err).to.eql(null)
-        tymlyService = tymlyServices.tymly
-        statebox = tymlyServices.statebox
-        client = tymlyServices.storage.client
-        done()
       }
     )
+
+    tymlyService = tymlyServices.tymly
+    statebox = tymlyServices.statebox
+    client = tymlyServices.storage.client
   })
 
-  it('should create and populate the fsa.food_ratings database table', function (done) {
-    statebox.startExecution(
+  it('create and populate the fsa.food_ratings database table', async () => {
+    const executionDescription = await statebox.startExecution(
       {
         xmlPath: path.resolve(__dirname, './fixtures/food_ratings.xml'),
         csvPath: path.resolve(__dirname, './output/inserts/food_ratings.csv'),
@@ -57,65 +54,44 @@ describe('data import', function () {
       STATE_MACHINE_NAME, // state machine name
       {
         sendResponse: 'COMPLETE'
-      }, // options
-      function (err, executionDescription) {
-        expect(err).to.eql(null)
-        expect(executionDescription.status).to.eql('SUCCEEDED')
-        expect(executionDescription.currentStateName).to.eql('ImportingCsvFiles')
-        done()
-      }
+      } // options
     )
+
+    expect(executionDescription.status).to.eql('SUCCEEDED')
+    expect(executionDescription.currentStateName).to.eql('ImportingCsvFiles')
   })
 
-  it('Should be the correct data in the database', function (done) {
-    client.query(
+  it('verify data in the table', async () => {
+    const result = await client.query(
       'select fhrsid, local_authority_business_id, business_name, business_type, business_type_id, address_line_1, ' +
       'address_line_2, address_line_3, address_line_4, postcode, rating_value, rating_key, TO_CHAR(rating_date, \'DD/MM/YYYY\') AS rating_date, ' +
       'local_authority_code, local_authority_name, local_authority_website, local_authority_email_address, ' +
       'hygiene, structural, confidence_in_management, scheme_type, new_rating_pending, longitude, latitude ' +
-      'from fsa.food_ratings order by fhrsid;',
-      function (err, result) {
-        if (err) {
-          done(err)
-        } else {
-          expect(result.rowCount).to.eql(5)
-          expect(result.rows[0].fhrsid).to.eql('1234567890')
-          expect(result.rows[1].fhrsid).to.eql('1234567891')
-          expect(result.rows[2].fhrsid).to.eql('1234567892')
-          expect(result.rows[3].fhrsid).to.eql('1234567893')
-          expect(result.rows[4].fhrsid).to.eql('1234567894')
-          done()
-        }
-      }
+      'from fsa.food_ratings order by fhrsid;'
     )
+
+    expect(result.rowCount).to.eql(5)
+    expect(result.rows[0].fhrsid).to.eql('1234567890')
+    expect(result.rows[1].fhrsid).to.eql('1234567891')
+    expect(result.rows[2].fhrsid).to.eql('1234567892')
+    expect(result.rows[3].fhrsid).to.eql('1234567893')
+    expect(result.rows[4].fhrsid).to.eql('1234567894')
   })
 
-  it('Should be clean up the database', function (done) {
-    client.query(
-      'DELETE FROM fsa.food_ratings WHERE fhrsid::text LIKE \'123456789%\';',
-      function (err, result) {
-        if (err) {
-          done(err)
-        } else {
-          expect(result.rowCount).to.eql(5)
-          done()
-        }
-      }
+  it('clean up the database', async () => {
+    const result = await client.query(
+      'DELETE FROM fsa.food_ratings WHERE fhrsid::text LIKE \'123456789%\';'
     )
+
+    expect(result.rowCount).to.eql(5)
   })
 
-  it('Should find a now empty database', function (done) {
-    client.query(
-      'select * from fsa.food_ratings;',
-      function (err, result) {
-        if (err) {
-          done(err)
-        } else {
-          expect(result.rows).to.eql([])
-          done()
-        }
-      }
+  it('verify empty database', async () => {
+    const result = await client.query(
+      'select * from fsa.food_ratings;'
     )
+
+    expect(result.rows).to.eql([])
   })
 
   // TODO: package that converts a CSV file into an XML file appears to be tardy releasing file locks, which causes code that deletes output folder to fail
@@ -127,7 +103,7 @@ describe('data import', function () {
   //   }
   // })
 
-  it('should shutdown Tymly', async () => {
+  after('shutdown Tymly', async () => {
     await tymlyService.shutdown()
   })
 })
