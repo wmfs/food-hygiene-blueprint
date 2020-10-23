@@ -2,13 +2,11 @@ version: 2
 jobs:
   unit test:
     docker:
-      # use node:lts
       - image: cimg/node:lts
         environment:
            TZ: "Europe/London"
            PG_CONNECTION_STRING: postgres://postgres:postgres@localhost:5432/circle_test
            TIMEOUT: 15000
-      # use postgres 9.6
       - image: circleci/postgres:9.6-alpine-postgis-ram
         environment:
           POSTGRES_USER: postgres
@@ -16,9 +14,19 @@ jobs:
     working_directory: ~/repo
     steps:
       - checkout
+      - restore_cache:
+          keys:
+            - v1-deps-{{ checksum "package.json" }}
+            - v1-deps-
       - run:
           name: install
-          command: npm install
+          command: |
+            npm config set //registry.npmjs.org/:_authToken=$NPM_TOKEN
+            npm install
+      - save_cache:
+          key: v1-deps-{{ checksum "package.json" }}
+          paths:
+            - node_modules
       - run:
           name: test
           command: npm test
@@ -39,21 +47,30 @@ jobs:
           command: npm run lint
   release:
     docker:
-    # use node:lts
-    - image: cimg/node:lts
-      environment:
-        TZ: "Europe/London"
+      - image: cimg/node:lts
+        environment:
+          TZ: "Europe/London"
     working_directory: ~/repo
     steps:
-    - checkout
-    - run:
-        name: install
-        command: npm install
-    - run:
-        name: release
-        command: |
-          chmod +x version_blueprint
-          npx semantic-release
+      - checkout
+      - restore_cache:
+          keys:
+            - v1-deps-{{ checksum "package.json" }}
+            - v1-deps-
+      - run:
+          name: install
+          command: |
+            npm config set //registry.npmjs.org/:_authToken=$NPM_TOKEN
+            npm install
+      - save_cache:
+          key: v1-deps-{{ checksum "package.json" }}
+          paths:
+            - node_modules
+      - run:
+          name: release
+          command: |
+            chmod +x version_blueprint
+            npx semantic-release
 workflows:
   version: 2
   test_and_release:
