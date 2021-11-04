@@ -52,7 +52,9 @@ jobs:
       - checkout
       - run:
           name: install standard
-          command: npm install standard
+          command: |
+            npm config set //registry.npmjs.org/:_authToken=$NPM_TOKEN
+            npm install
       - run:
           name: lint
           command: npm run lint
