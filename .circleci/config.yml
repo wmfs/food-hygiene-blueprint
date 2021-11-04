@@ -98,6 +98,7 @@ workflows:
     - lint:
         context:
           - docker-hub-creds
+          - build-env-vars
     - release:
         context:
           - docker-hub-creds
