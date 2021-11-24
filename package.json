@@ -37,7 +37,7 @@
     "@wmfs/tymly": "1.221.0",
     "@wmfs/tymly-etl-plugin": "1.155.0",
     "@wmfs/tymly-pg-plugin": "1.256.0",
-    "@wmfs/tymly-test-helpers": "1.10.0"
+    "@wmfs/tymly-test-helpers": "1.11.0"
   },
   "scripts": {
     "lint": "standard",
