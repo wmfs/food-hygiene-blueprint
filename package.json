@@ -30,7 +30,7 @@
     "nyc": "15.1.0",
     "rimraf": "5.0.1",
     "standard": "17.1.0",
-    "semantic-release": "21.0.2",
+    "semantic-release": "21.0.3",
     "@semantic-release/changelog": "6.0.3",
     "@semantic-release/git": "10.0.1",
     "@semantic-release/exec": "6.0.3",
