@@ -28,7 +28,7 @@
     "debug": "4.3.4",
     "mocha": "10.4.0",
     "nyc": "15.1.0",
-    "rimraf": "5.0.6",
+    "rimraf": "5.0.7",
     "standard": "17.1.0",
     "semantic-release": "23.1.1",
     "@semantic-release/changelog": "6.0.3",
