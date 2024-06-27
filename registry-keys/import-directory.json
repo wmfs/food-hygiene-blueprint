@@ -1,0 +1,14 @@
+{
+  "label": "Food Standards Agency Import Directory",
+  "description": "Food Standards Agency Import Directory",
+  "schema": {
+    "properties": {
+      "environmentVariableName": "FSA_IMPORT_DIRECTORY",
+      "value": {
+        "type": "string",
+        "default": "Please insert value here"
+      }
+    },
+    "required": ["value"]
+  }
+}

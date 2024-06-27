@@ -1,0 +1,157 @@
+{
+  "templateMeta": {
+    "name": "refresh-data-form",
+    "title": "Refresh Food Standards Agency Data via CSV File",
+    "category": "fsa"
+  },
+  "type": "AdaptiveCard",
+  "body": [
+    {
+      "type": "Container",
+      "color": "accent",
+      "spacing": "none",
+      "items": [
+        {
+          "type": "TextBlock",
+          "weight": "bolder",
+          "size": "medium",
+          "spacing": "none",
+          "text": "Refresh Food Standards Agency Data"
+        }
+      ]
+    },
+    {
+      "type": "Collapsible",
+      "title": "Previous Imports",
+      "card": {
+        "type": "AdaptiveCard",
+        "body": [
+          {
+            "type": "Timeline",
+            "arrayPath": "data.history",
+            "items": [
+              {
+                "type": "TimelineEntry",
+                "subtitle": "{{ formatDate(item.modified, 'DD MMM YYYY HH:mm') }} - {{ item.modifiedBy || item.createdBy }}",
+                "title": "{{ item.clientFilename }}",
+                "spacing": "none",
+                "items": [
+                  {
+                    "type": "Chip",
+                    "showWhen": "item.complete === true",
+                    "style": "badge",
+                    "color": "good",
+                    "topSpacing": "none",
+                    "text": "Complete"
+                  },
+                  {
+                    "type": "Chip",
+                    "showWhen": "item.complete !== true",
+                    "style": "badge",
+                    "color": "warning",
+                    "topSpacing": "none",
+                    "text": "Incomplete"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "upload",
+      "type": "Input.FileUpload",
+      "onUploadEndpoint": {
+        "name": "fsa_refreshDataUpload_1_0"
+      },
+      "autoUpload": true,
+      "additionalFields": {
+        "upload": true
+      },
+      "accept": [
+        ".csv"
+      ]
+    },
+    {
+      "color": "good",
+      "type": "Container",
+      "spacing": "none",
+      "showWhen": "data.uploadGood",
+      "items": [
+        {
+          "type": "TextBlock",
+          "text": "{{ data.uploadGood }}",
+          "weight": "bolder",
+          "spacing": "small"
+        }
+      ]
+    },
+    {
+      "color": "warning",
+      "type": "Container",
+      "spacing": "none",
+      "showWhen": "data.uploadWarning",
+      "items": [
+        {
+          "type": "TextBlock",
+          "text": "{{ data.uploadWarning }}",
+          "weight": "bolder",
+          "spacing": "small"
+        }
+      ]
+    },
+    {
+      "color": "attention",
+      "type": "Container",
+      "spacing": "none",
+      "showWhen": "data.uploadError",
+      "items": [
+        {
+          "type": "TextBlock",
+          "text": "{{ data.uploadError }}",
+          "weight": "bolder",
+          "spacing": "small"
+        }
+      ]
+    },
+    {
+      "showWhen": "data.uploadWarning",
+      "type": "Table",
+      "arrayPath": "data.rejected",
+      "title": "Rejected rows",
+      "columns": [
+        {
+          "title": "#",
+          "field": "idx"
+        },
+        {
+          "title": "Reasons",
+          "field": "rejectionReasons",
+          "format": "item.rejectionReasons.join(', ')"
+        }
+      ]
+    }
+  ],
+  "actions": [
+    {
+      "type": "Action.Cancel",
+      "title": "Cancel"
+    },
+    {
+      "showWhen": "data.uploadGood || data.uploadWarning",
+      "type": "Action.ReplaceCard",
+      "stateMachineName": "fsa_refreshDataSubmit_1_0",
+      "title": "Import",
+      "input": {
+        "importDirectory":  "$.importDirectory",
+        "serverFilename": "$.serverFilename",
+        "clientFilename": "$.clientFilename",
+        "totalRows": "$.totalRows",
+        "rows": "$.rows"
+      }
+    }
+  ],
+  "$schema": "https://raw.githubusercontent.com/wmfs/cardscript-schema/master/lib/schema.json",
+  "version": "1.0"
+}

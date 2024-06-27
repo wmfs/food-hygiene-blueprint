@@ -1,59 +1,59 @@
 {
   "title": "food-ratings",
   "description": "Food and hygiene ratings",
-  "primaryKey": ["fhrsid"],
+  "primaryKey": ["fhrsId"],
   "type": "object",
   "properties": {
-    "fhrsid": {
+    "fhrsId": {
       "type": "number"
     },
-    "local_authority_business_id": {
+    "localAuthorityBusinessId": {
       "type": "string"
     },
-    "business_name": {
+    "businessName": {
       "type": "string"
     },
-    "business_type": {
+    "businessType": {
       "type": "string"
     },
-    "business_type_id": {
+    "businessTypeId": {
       "type": "integer"
     },
-    "address_line_1": {
+    "addressLine1": {
       "type": "string"
     },
-    "address_line_2": {
+    "addressLine2": {
       "type": "string"
     },
-    "address_line_3": {
+    "addressLine3": {
       "type": "string"
     },
-    "address_line_4": {
+    "addressLine4": {
       "type": "string"
     },
     "postcode": {
       "type": "string"
     },
-    "rating_value": {
+    "ratingValue": {
       "type": "string"
     },
-    "rating_key": {
+    "ratingKey": {
       "type": "string"
     },
-    "rating_date": {
+    "ratingDate": {
       "type": "string",
       "format": "date-time"
     },
-    "local_authority_code": {
+    "localAuthorityCode": {
       "type": "string"
     },
-    "local_authority_name": {
+    "localAuthorityName": {
       "type": "string"
     },
-    "local_authority_website": {
+    "localAuthorityWebSite": {
       "type": "string"
     },
-    "local_authority_email_address": {
+    "localAuthorityEmailAddress": {
       "type": "string"
     },
     "hygiene": {
@@ -62,13 +62,13 @@
     "structural": {
       "type": "integer"
     },
-    "confidence_in_management": {
+    "confidenceInManagement": {
       "type": "integer"
     },
-    "scheme_type": {
+    "schemeType": {
       "type": "string"
     },
-    "new_rating_pending": {
+    "newRatingPending": {
       "type": "string"
     },
     "longitude": {
@@ -80,6 +80,13 @@
       "type": "number",
       "maxLength": 8,
       "multipleOf": 0.00000001
+    },
+    "rightToReply": {
+      "type": "string"
+    },
+    "uprn": {
+      "type": "integer",
+      "maxLength": 12
     }
   },
   "required": [
