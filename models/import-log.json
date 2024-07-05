@@ -1,0 +1,34 @@
+{
+  "title": "Food Standards Agency Import Log",
+  "description": "Food Standards Agency Import Log",
+  "type": "object",
+  "properties": {
+    "serverFilename": {
+      "type": "string"
+    },
+    "clientFilename": {
+      "type": "string"
+    },
+    "startTime": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "endTime": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "complete": {
+      "type": "boolean"
+    },
+    "totalRowsInserted": {
+      "type": "integer"
+    },
+    "totalRowsRejected": {
+      "type": "integer"
+    },
+    "totalRows": {
+      "type": "integer"
+    }
+  }
+}
+

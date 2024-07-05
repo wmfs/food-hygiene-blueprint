@@ -1,0 +1,6 @@
+﻿FHRSID,LocalAuthorityBusinessID,BusinessName,BusinessType,BusinessTypeID,AddressLine1,AddressLine2,PostCode,RatingValue,RatingKey,RatingDate.Element:Text,LocalAuthorityCode,LocalAuthorityName,LocalAuthorityWebSite,LocalAuthorityEmailAddress,Scores.Hygiene,Scores.Structural,Scores.ConfidenceInManagement,SchemeType,NewRatingPending,Geocode.Longitude,Geocode.Latitude,AddressLine3,AddressLine4,RightToReply,UPRN
+1000001,PI/000156035,Business A,Other catering premises,7841,1 Road,Birmingham,A12 3BC,AwaitingInspection,fhrs_awaitinginspection_en-GB,,402,Birmingham,,,,,,FHRS,FALSE,-1.90332754,52.48352569,,,,1234
+1000002,PI/000632986,Business B,Restaurant/Cafe/Canteen,1,2 Road,,L22 5LL,AwaitingInspection,fhrs_awaitinginspection_en-GB,,402,Birmingham,,,,,,FHRS,FALSE,-1.294935,52.4128,Birmingham,,,1235
+1000003,PI/000100729,Business C,Other catering premises,7841,,,,4,fhrs_4_en-GB,22/02/2022,402,Birmingham,,,5,0,10,FHRS,FALSE,,,,,,1236
+1000004,PI/000621864,Business D,Restaurant/Cafe/Canteen,1,3 Street,,A12 3BC,4,fhrs_4_en-GB,17/10/2022,402,Birmingham,,,5,5,10,FHRS,FALSE,-1.798486035,52.4575704,,Birmingham,,1237
+1000005,PI/000661764,Business E,Retailers - other,4613,4 Avenue,Birmingham,Y23 4KD,5,fhrs_5_en-GB,03/02/2020,402,Birmingham,,,0,5,5,FHRS,FALSE,-1.1344252,52.42154065,,,,1238

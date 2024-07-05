@@ -1,0 +1,36 @@
+{
+  "Comment": "Refresh Food Standards Agency Data via CSV File",
+  "name": "Refresh Food Standards Agency Data via CSV File",
+  "version": "1.0",
+  "categories": [
+    "fsa"
+  ],
+  "StartAt": "ImportDirectory",
+  "States": {
+    "ImportDirectory": {
+      "Type": "Task",
+      "Resource": "module:getConfiguredRegistryKey",
+      "ResourceConfig": {
+        "key": "fsa_importDirectory"
+      },
+      "Parameters": {
+        "defaultValue": false
+      },
+      "ResultPath": "$.importDirectory",
+      "Next": "Process"
+    },
+    "Process": {
+      "Type": "Task",
+      "Resource": "function:fsa_refreshDataUpload",
+      "End": true
+    }
+  },
+  "restrictions": [
+    {
+      "roleId": "fsa_importer",
+      "allows": [
+        "*"
+      ]
+    }
+  ]
+}
