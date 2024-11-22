@@ -1,3 +1,5 @@
+# [1.3.0](https://github.com/wmfs/food-hygiene-blueprint/compare/v1.2.0...v1.3.0) (2024-11-22)
+
 # [1.2.0](https://github.com/wmfs/food-hygiene-blueprint/compare/v1.1.0...v1.2.0) (2024-11-04)
 
 # [1.1.0](https://github.com/wmfs/food-hygiene-blueprint/compare/v1.0.14...v1.1.0) (2024-07-08)
