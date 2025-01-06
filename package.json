@@ -40,7 +40,7 @@
     "@wmfs/tymly-etl-plugin": "1.179.0",
     "@wmfs/tymly": "1.288.0",
     "@wmfs/tymly-pg-plugin": "1.305.0",
-    "@wmfs/tymly-cardscript-plugin": "1.48.0",
+    "@wmfs/tymly-cardscript-plugin": "1.49.0",
     "@wmfs/tymly-test-helpers": "1.24.0"
   },
   "scripts": {
