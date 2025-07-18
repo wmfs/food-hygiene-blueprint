@@ -1,3 +1,14 @@
+## [1.5.0](https://github.com/wmfs/food-hygiene-blueprint/compare/v1.4.0...v1.5.0) (2025-07-18)
+
+### Build system dependencies :hammer:
+
+* **deps-dev:** update dependency @wmfs/tymly to v1.314.0 ([#1094](https://github.com/wmfs/food-hygiene-blueprint/issues/1094)) ([874c6bd](https://github.com/wmfs/food-hygiene-blueprint/commit/874c6bdbd8acc69d36d6293a4fc20233c9423f26))
+* **deps-dev:** update dependency @wmfs/tymly to v1.315.0 ([#1097](https://github.com/wmfs/food-hygiene-blueprint/issues/1097)) ([064eae7](https://github.com/wmfs/food-hygiene-blueprint/commit/064eae7145a0dfa9a1521cd4f52d67d51888afef))
+* **deps-dev:** update dependency @wmfs/tymly-pg-plugin to v1.341.0 ([#1095](https://github.com/wmfs/food-hygiene-blueprint/issues/1095)) ([b508995](https://github.com/wmfs/food-hygiene-blueprint/commit/b508995d8c2cba7f341fac56656c053ea8fd9d94))
+* **deps-dev:** update dependency conventional-changelog-conventionalcommits to v9.1.0 ([#1092](https://github.com/wmfs/food-hygiene-blueprint/issues/1092)) ([edd80a5](https://github.com/wmfs/food-hygiene-blueprint/commit/edd80a580f7a6808cc9580651e8e75337b2411ff))
+* **deps-dev:** update dependency semantic-release to v24.2.7 ([#1096](https://github.com/wmfs/food-hygiene-blueprint/issues/1096)) ([03947cd](https://github.com/wmfs/food-hygiene-blueprint/commit/03947cdf3b113b4855136f2bcb440f4344d184e1))
+* **deps:** update dependency csv-parse to v6.1.0 ([#1098](https://github.com/wmfs/food-hygiene-blueprint/issues/1098)) ([294b912](https://github.com/wmfs/food-hygiene-blueprint/commit/294b912bf03b551e350003e0a0b4237ac4bd7cce))
+
 ## [1.4.0](https://github.com/wmfs/food-hygiene-blueprint/compare/v1.3.0...v1.4.0) (2025-07-11)
 
 ### Build system dependencies :hammer:
