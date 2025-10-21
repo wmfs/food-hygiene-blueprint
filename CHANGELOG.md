@@ -1,3 +1,20 @@
+## [1.6.0](https://github.com/wmfs/food-hygiene-blueprint/compare/v1.5.0...v1.6.0) (2025-10-21)
+
+### Build system dependencies :hammer:
+
+* **deps-dev:** update dependency @semantic-release/release-notes-generator to v14.1.0 ([#1101](https://github.com/wmfs/food-hygiene-blueprint/issues/1101)) ([df21c94](https://github.com/wmfs/food-hygiene-blueprint/commit/df21c94f9f3f2a4ee0a3565363b4a85037edd034))
+* **deps-dev:** update dependency chai to v6 ([#1099](https://github.com/wmfs/food-hygiene-blueprint/issues/1099)) ([708d09e](https://github.com/wmfs/food-hygiene-blueprint/commit/708d09e8bda0399c53cef2a597d73d205ae26042))
+* **deps-dev:** update dependency chai to v6.2.0 ([#1105](https://github.com/wmfs/food-hygiene-blueprint/issues/1105)) ([784c47e](https://github.com/wmfs/food-hygiene-blueprint/commit/784c47e18ef64216e81dfff5063e4047366fca95))
+* **deps-dev:** update dependency debug to v4.4.3 ([#1103](https://github.com/wmfs/food-hygiene-blueprint/issues/1103)) ([adb3187](https://github.com/wmfs/food-hygiene-blueprint/commit/adb3187f31e909d87ad8cbfe1044c8470c873e8b))
+* **deps-dev:** update dependency mocha to v11.7.2 ([#1100](https://github.com/wmfs/food-hygiene-blueprint/issues/1100)) ([d3cc8c4](https://github.com/wmfs/food-hygiene-blueprint/commit/d3cc8c4ba8c5d4dfcd614ac0ba858f80ec9b92fd))
+* **deps-dev:** update dependency mocha to v11.7.3 ([#1106](https://github.com/wmfs/food-hygiene-blueprint/issues/1106)) ([c5d412a](https://github.com/wmfs/food-hygiene-blueprint/commit/c5d412a779b587f5f2e42fdfd05c736e412cd457))
+* **deps-dev:** update dependency mocha to v11.7.4 ([#1107](https://github.com/wmfs/food-hygiene-blueprint/issues/1107)) ([5ed7dfe](https://github.com/wmfs/food-hygiene-blueprint/commit/5ed7dfe8f63b0dcf24d05b0e42fa29a350b6e2f0))
+* **deps-dev:** update dependency semantic-release to v24.2.8 ([#1102](https://github.com/wmfs/food-hygiene-blueprint/issues/1102)) ([3960a60](https://github.com/wmfs/food-hygiene-blueprint/commit/3960a6023ce3a3ea30416bc164e7cec80a47215a))
+* **deps-dev:** update dependency semantic-release to v24.2.9 ([#1104](https://github.com/wmfs/food-hygiene-blueprint/issues/1104)) ([0b58855](https://github.com/wmfs/food-hygiene-blueprint/commit/0b588559b629f9342980d3c71ffe8e2e2f60a1b2))
+* **deps-dev:** update dependency semantic-release to v25 ([#1108](https://github.com/wmfs/food-hygiene-blueprint/issues/1108)) ([6cc0b46](https://github.com/wmfs/food-hygiene-blueprint/commit/6cc0b461180eda5518b122c2e9fe4b4b4a648ec9))
+* **deps-dev:** update dependency semantic-release to v25.0.1 ([#1109](https://github.com/wmfs/food-hygiene-blueprint/issues/1109)) ([9f9a64f](https://github.com/wmfs/food-hygiene-blueprint/commit/9f9a64f8592b3c696c546bf7e09ea98c0466ce47))
+* **deps:** revert chai to non-esm ([0222445](https://github.com/wmfs/food-hygiene-blueprint/commit/022244566bc40d61e8a82d226ac6af3143462c1a))
+
 ## [1.5.0](https://github.com/wmfs/food-hygiene-blueprint/compare/v1.4.0...v1.5.0) (2025-07-18)
 
 ### Build system dependencies :hammer:
