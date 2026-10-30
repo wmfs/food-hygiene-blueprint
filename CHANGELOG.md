@@ -1,3 +1,28 @@
+## [1.7.0](https://github.com/wmfs/food-hygiene-blueprint/compare/v1.6.1...v1.7.0) (2026-10-30)
+
+### Build system dependencies :hammer:
+
+* **deps-dev:** fix conventionalcommit versions [sc-34125] ([34a2c5c](https://github.com/wmfs/food-hygiene-blueprint/commit/34a2c5ca4bb487c8131f0cb8bb970a80c2cd00af))
+* **deps-dev:** update [@wmfs](https://github.com/wmfs) packages ([#1159](https://github.com/wmfs/food-hygiene-blueprint/issues/1159)) ([fc9e392](https://github.com/wmfs/food-hygiene-blueprint/commit/fc9e3929bd896648db091ecc3aae2c57091a620c))
+* **deps-dev:** update dependency @wmfs/tymly to v1.317.1 ([#1144](https://github.com/wmfs/food-hygiene-blueprint/issues/1144)) ([a2b5100](https://github.com/wmfs/food-hygiene-blueprint/commit/a2b51004ff6772afc4b2d777e5a032f9d220f1b3))
+* **deps-dev:** update dependency @wmfs/tymly-cardscript-plugin to v1.53.1 ([#1145](https://github.com/wmfs/food-hygiene-blueprint/issues/1145)) ([fb64d4b](https://github.com/wmfs/food-hygiene-blueprint/commit/fb64d4b7f87257a1268636427de2f065e3cb006f))
+* **deps-dev:** update dependency @wmfs/tymly-etl-plugin to v1.189.1 ([#1146](https://github.com/wmfs/food-hygiene-blueprint/issues/1146)) ([0682462](https://github.com/wmfs/food-hygiene-blueprint/commit/06824629a000ffe979ebb247971cb47e05cea229))
+* **deps-dev:** update dependency @wmfs/tymly-pg-plugin to v1.348.1 ([#1147](https://github.com/wmfs/food-hygiene-blueprint/issues/1147)) ([65508ba](https://github.com/wmfs/food-hygiene-blueprint/commit/65508ba0712466af37da166666dff1dc59506c91))
+* **deps-dev:** update dependency @wmfs/tymly-test-helpers to v1.24.1 ([#1148](https://github.com/wmfs/food-hygiene-blueprint/issues/1148)) ([e853a5d](https://github.com/wmfs/food-hygiene-blueprint/commit/e853a5de9c89952577c9841404ddbc0bd942f52e))
+* **deps-dev:** update dependency conventional-changelog-conventionalcommits to v10.4.0 ([#1149](https://github.com/wmfs/food-hygiene-blueprint/issues/1149)) ([493835c](https://github.com/wmfs/food-hygiene-blueprint/commit/493835c5dc08197a12aaae7462996c0f5cfda4e7))
+* **deps-dev:** update dependency conventional-changelog-conventionalcommits to v10.4.1 ([#1156](https://github.com/wmfs/food-hygiene-blueprint/issues/1156)) ([3442c12](https://github.com/wmfs/food-hygiene-blueprint/commit/3442c126a1c23867cd05a3fd40f6952629a9d493))
+* **deps-dev:** update dependency mocha to v12 ([#1150](https://github.com/wmfs/food-hygiene-blueprint/issues/1150)) ([f373677](https://github.com/wmfs/food-hygiene-blueprint/commit/f3736773d90a318dcdc92162f5bc600b56550354))
+* **deps-dev:** update dependency mocha to v12.0.1 ([#1153](https://github.com/wmfs/food-hygiene-blueprint/issues/1153)) ([e66c9cd](https://github.com/wmfs/food-hygiene-blueprint/commit/e66c9cde144530fcc315a1e822d83b969cd77ce9))
+* **deps-dev:** update dependency mocha to v12.0.2 ([#1154](https://github.com/wmfs/food-hygiene-blueprint/issues/1154)) ([0b6fa34](https://github.com/wmfs/food-hygiene-blueprint/commit/0b6fa3450cd2c3764eef199f7967d144b61a0ddd))
+* **deps-dev:** update dependency mocha to v12.0.3 ([#1155](https://github.com/wmfs/food-hygiene-blueprint/issues/1155)) ([c439b06](https://github.com/wmfs/food-hygiene-blueprint/commit/c439b06df6deb2854045fabf868967fd4893ade8))
+* **deps:** Add missing dependencies [sc-33852] ([#1157](https://github.com/wmfs/food-hygiene-blueprint/issues/1157)) ([6da622c](https://github.com/wmfs/food-hygiene-blueprint/commit/6da622cba903fb743e550b7685a7452db17909ef))
+* **deps:** update dependency csv-parse to v7 [security] ([#1152](https://github.com/wmfs/food-hygiene-blueprint/issues/1152)) ([f53bbbd](https://github.com/wmfs/food-hygiene-blueprint/commit/f53bbbd5784933a62a1c25757fa98e016a85650d))
+
+### CICD Configuration Changes :construction_worker:
+
+* use github-app-token orb for release token [sc-34101] ([#1160](https://github.com/wmfs/food-hygiene-blueprint/issues/1160)) ([8fc4f09](https://github.com/wmfs/food-hygiene-blueprint/commit/8fc4f098be4162c2bdaf63e1ec434574b194162a))
+* use shared renovate preset [sc-34117] ([#1158](https://github.com/wmfs/food-hygiene-blueprint/issues/1158)) ([75a397a](https://github.com/wmfs/food-hygiene-blueprint/commit/75a397a7b74d6bfe78c95c82fb5f75755f119067))
+
 ## [1.6.1](https://github.com/wmfs/food-hygiene-blueprint/compare/v1.6.0...v1.6.1) (2026-08-12)
 
 ## [1.6.0](https://github.com/wmfs/food-hygiene-blueprint/compare/v1.5.0...v1.6.0) (2025-10-21)
