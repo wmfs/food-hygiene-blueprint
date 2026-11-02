@@ -1,3 +1,10 @@
+## [1.8.0](https://github.com/wmfs/food-hygiene-blueprint/compare/v1.7.0...v1.8.0) (2026-11-02)
+
+### Build system dependencies :hammer:
+
+* **deps-dev:** update dependency @wmfs/tymly-cardscript-plugin to v1.54.0 ([#1161](https://github.com/wmfs/food-hygiene-blueprint/issues/1161)) ([97ed16b](https://github.com/wmfs/food-hygiene-blueprint/commit/97ed16b3a9f033996e2c02961db86843eb42dcc1))
+* **deps:** update dependency csv-parse to v7.0.3 ([#1162](https://github.com/wmfs/food-hygiene-blueprint/issues/1162)) ([f4eadd4](https://github.com/wmfs/food-hygiene-blueprint/commit/f4eadd465e7a9cd333708f6d9072cb956690f67e))
+
 ## [1.7.0](https://github.com/wmfs/food-hygiene-blueprint/compare/v1.6.1...v1.7.0) (2026-10-30)
 
 ### Build system dependencies :hammer:
